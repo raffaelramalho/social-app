@@ -1,8 +1,11 @@
 import './App.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
 import Login from './components/Login';
 import Dashboard from './components/Dashboard';
 import Preferences from './components/Preferences';
+import Home from './components/Home'
+
 import useToken from './useToken';
 
 
@@ -15,7 +18,6 @@ function App() {
   }
   return (
     <div className="wrapper">
-      <h1> ESSE EU TERMINO </h1>
       <BrowserRouter>
           <Switch>
               <Route path="/dashboard">
@@ -23,6 +25,9 @@ function App() {
               </Route>
               <Route path="/preferences">
                   <Preferences/>
+              </Route>
+              <Route path='/'>
+                <Home/>
               </Route>
           </Switch>
       </BrowserRouter>
